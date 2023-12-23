@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/crown_sfx.wav-f7fc229123dbff22493b1ffe12a6a3fd.sample"
+
+[deps]
+
+source_file="res://sprite/epic_crown/player/sfx/crown_sfx.wav"
+dest_files=[ "res://.import/crown_sfx.wav-f7fc229123dbff22493b1ffe12a6a3fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

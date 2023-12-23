@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/headswing_sfx.wav-a2cc57d07114512468b12749a3c21fca.sample"
+
+[deps]
+
+source_file="res://sprite/epic_crown/player/sfx/headswing_sfx.wav"
+dest_files=[ "res://.import/headswing_sfx.wav-a2cc57d07114512468b12749a3c21fca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

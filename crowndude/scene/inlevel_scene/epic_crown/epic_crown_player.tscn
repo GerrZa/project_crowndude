@@ -1,0 +1,278 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://script/epic_crown/player_epiccrown.gd" type="Script" id=1]
+[ext_resource path="res://sprite/epic_crown/player/player1_tank_sheet.png" type="Texture" id=2]
+[ext_resource path="res://sprite/epic_crown/player/empty_tank_sheet.png" type="Texture" id=3]
+[ext_resource path="res://sprite/epic_crown/player/crown.png" type="Texture" id=4]
+[ext_resource path="res://shader/flash_shader.gdshader" type="Shader" id=5]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8, 11 )
+
+[sub_resource type="ShaderMaterial" id=15]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/flash_color = Color( 1, 1, 1, 1 )
+shader_param/flash_modi = 0.0
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "attack"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8, 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "jump"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="ShaderMaterial" id=14]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/flash_color = Color( 1, 1, 1, 1 )
+shader_param/flash_modi = 0.0
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "jump"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "running"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 2, 3, 4, 5 ]
+}
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 12, 13 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 12, 1.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 12.25, 10 )
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0.35 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "idle"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 0.35 ), Vector2( 0, -0.35 ), Vector2( 0, 0.35 ) ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+collision_mask = 2
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="point_timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2( 0, -2 )
+shape = SubResource( 12 )
+
+[node name="player_spr" type="Sprite" parent="."]
+material = SubResource( 15 )
+texture = ExtResource( 2 )
+hframes = 13
+
+[node name="player_animator" type="AnimationPlayer" parent="player_spr"]
+method_call_mode = 1
+anims/RESET = SubResource( 1 )
+anims/attack = SubResource( 4 )
+anims/idle = SubResource( 2 )
+anims/jump = SubResource( 3 )
+
+[node name="tank_spr" type="Sprite" parent="."]
+material = SubResource( 14 )
+texture = ExtResource( 3 )
+hframes = 13
+
+[node name="tank_animator" type="AnimationPlayer" parent="tank_spr"]
+playback_speed = 2.0
+method_call_mode = 1
+anims/RESET = SubResource( 5 )
+anims/idle = SubResource( 6 )
+anims/jump = SubResource( 8 )
+anims/running = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource( 10 )
+
+[node name="ground_check" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground_check"]
+modulate = Color( 0.764706, 0.129412, 0.819608, 1 )
+position = Vector2( 0, 12.5 )
+shape = SubResource( 9 )
+
+[node name="attack_check" type="Area2D" parent="."]
+collision_layer = 0
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack_check"]
+position = Vector2( 7.24998, -4 )
+shape = SubResource( 11 )
+
+[node name="crown_spr" type="Sprite" parent="."]
+position = Vector2( 0, -24 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, 0.35 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="crown_spr"]
+autoplay = "idle"
+anims/RESET = SubResource( 17 )
+anims/idle = SubResource( 16 )
+
+[node name="flash_timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="powerup_timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="point_timer" to="." method="_on_point_timer_timeout"]
+[connection signal="area_shape_entered" from="hitbox" to="." method="_on_hitbox_area_shape_entered"]
+[connection signal="timeout" from="flash_timer" to="." method="_on_flash_timer_timeout"]
